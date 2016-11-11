@@ -10,6 +10,7 @@ type Config struct {
 	SSLProtocols                  string
 	SSLCiphers                    string
 	SSLDHParam                    string
+	MainLogFormat                 string
 }
 
 // NewDefaultConfig creates a Config with default values

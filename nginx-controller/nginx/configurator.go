@@ -319,6 +319,7 @@ func (cnf *Configurator) UpdateConfig(config *Config) {
 		SSLProtocols:              config.SSLProtocols,
 		SSLCiphers:                config.SSLCiphers,
 		SSLDHParam:                config.SSLDHParam,
+		LogFormat:                 config.MainLogFormat,
 	}
 
 	cnf.nginx.UpdateMainConfigFile(mainCfg)

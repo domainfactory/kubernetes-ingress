@@ -329,6 +329,9 @@ func (lbc *LoadBalancerController) syncCfgm(key string) {
 		}
 		if sslDHParam, exists := cfgm.Data["ssl-dhparam"]; exists {
 			cfg.SSLDHParam = sslDHParam
+                }
+		if logFormat, exists := cfgm.Data["log-format"]; exists {
+			cfg.MainLogFormat = logFormat
 		}
 	}
 	lbc.cnf.UpdateConfig(cfg)

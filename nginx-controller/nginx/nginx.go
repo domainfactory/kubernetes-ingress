@@ -64,6 +64,7 @@ type NginxMainConfig struct {
 	SSLProtocols              string
 	SSLCiphers                string
 	SSLDHParam                string
+	LogFormat                 string
 }
 
 // NewUpstreamWithDefaultServer creates an upstream with the default server.
