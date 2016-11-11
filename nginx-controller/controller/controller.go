@@ -324,6 +324,12 @@ func (lbc *LoadBalancerController) syncCfgm(key string) {
 		if logFormat, exists := cfgm.Data["log-format"]; exists {
 			cfg.MainLogFormat = logFormat
 		}
+		if proxyBuffers, exists := cfgm.Data["proxy-buffers"]; exists {
+			cfg.MainProxyBuffers = proxyBuffers
+		}
+		if proxyBufferSize, exists := cfgm.Data["proxy-buffer-size"]; exists {
+			cfg.MainProxyBufferSize = proxyBufferSize
+		}
 	}
 	lbc.cnf.UpdateConfig(cfg)
 

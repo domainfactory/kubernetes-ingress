@@ -8,6 +8,8 @@ type Config struct {
 	MainServerNamesHashBucketSize string
 	MainServerNamesHashMaxSize    string
 	MainLogFormat                 string
+	MainProxyBuffers              string
+	MainProxyBufferSize           string
 }
 
 // NewDefaultConfig creates a Config with default values
@@ -18,5 +20,7 @@ func NewDefaultConfig() *Config {
 		ClientMaxBodySize:          "1m",
 		MainServerNamesHashMaxSize: "512",
                 MainLogFormat:              "",
+                MainProxyBuffers:           "",
+                MainProxyBufferSize:        "",
 	}
 }

@@ -62,6 +62,8 @@ type NginxMainConfig struct {
 	ServerNamesHashBucketSize string
 	ServerNamesHashMaxSize    string
 	LogFormat                 string
+	ProxyBuffers              string
+	ProxyBufferSize           string
 }
 
 // NewUpstreamWithDefaultServer creates an upstream with the default server.

@@ -30,6 +30,9 @@ http {
 
     keepalive_timeout  65;
 
+    {{if .ProxyBuffers}}proxy_buffers {{.ProxyBuffers}};{{end}}
+    {{if .ProxyBufferSize}}proxy_buffer_size {{.ProxyBufferSize}};{{end}}
+
     #gzip  on;
 
     server_names_hash_max_size {{.ServerNamesHashMaxSize}};

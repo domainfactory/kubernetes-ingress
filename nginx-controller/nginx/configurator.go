@@ -317,6 +317,8 @@ func (cnf *Configurator) UpdateConfig(config *Config) {
 		ServerNamesHashBucketSize: config.MainServerNamesHashBucketSize,
 		ServerNamesHashMaxSize:    config.MainServerNamesHashMaxSize,
 		LogFormat:                 config.MainLogFormat,
+                ProxyBuffers:              config.MainProxyBuffers,
+                ProxyBufferSize:           config.MainProxyBufferSize,
 	}
 
 	cnf.nginx.UpdateMainConfigFile(mainCfg)
