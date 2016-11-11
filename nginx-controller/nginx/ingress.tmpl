@@ -11,6 +11,7 @@ server {
 	listen 443 ssl http2;
 	ssl_certificate {{$server.SSLCertificate}};
 	ssl_certificate_key {{$server.SSLCertificateKey}};
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
 	{{end}}
 
 	{{if $server.Name}}
