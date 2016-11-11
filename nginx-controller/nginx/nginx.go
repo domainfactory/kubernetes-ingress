@@ -3,10 +3,10 @@ package nginx
 import (
 	"bytes"
 	"fmt"
-	"text/template"
 	"os"
 	"os/exec"
 	"path"
+	"text/template"
 
 	"github.com/golang/glog"
 )
@@ -61,6 +61,9 @@ type Location struct {
 type NginxMainConfig struct {
 	ServerNamesHashBucketSize string
 	ServerNamesHashMaxSize    string
+	SSLProtocols              string
+	SSLCiphers                string
+	SSLDHParam                string
 	LogFormat                 string
 	ProxyBuffers              string
 	ProxyBufferSize           string

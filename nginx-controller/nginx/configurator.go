@@ -316,6 +316,9 @@ func (cnf *Configurator) UpdateConfig(config *Config) {
 	mainCfg := &NginxMainConfig{
 		ServerNamesHashBucketSize: config.MainServerNamesHashBucketSize,
 		ServerNamesHashMaxSize:    config.MainServerNamesHashMaxSize,
+		SSLProtocols:              config.SSLProtocols,
+		SSLCiphers:                config.SSLCiphers,
+		SSLDHParam:                config.SSLDHParam,
 		LogFormat:                 config.MainLogFormat,
                 ProxyBuffers:              config.MainProxyBuffers,
                 ProxyBufferSize:           config.MainProxyBufferSize,

@@ -7,6 +7,9 @@ type Config struct {
 	ClientMaxBodySize             string
 	MainServerNamesHashBucketSize string
 	MainServerNamesHashMaxSize    string
+	SSLProtocols                  string
+	SSLCiphers                    string
+	SSLDHParam                    string
 	MainLogFormat                 string
 	MainProxyBuffers              string
 	MainProxyBufferSize           string
