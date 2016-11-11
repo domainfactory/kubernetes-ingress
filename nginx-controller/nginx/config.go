@@ -7,6 +7,9 @@ type Config struct {
 	ClientMaxBodySize             string
 	MainServerNamesHashBucketSize string
 	MainServerNamesHashMaxSize    string
+	SSLProtocols                  string
+	SSLCiphers                    string
+	SSLDHParam                    string
 }
 
 // NewDefaultConfig creates a Config with default values

@@ -321,6 +321,15 @@ func (lbc *LoadBalancerController) syncCfgm(key string) {
 		if serverNamesHashMaxSize, exists := cfgm.Data["server-names-hash-max-size"]; exists {
 			cfg.MainServerNamesHashMaxSize = serverNamesHashMaxSize
 		}
+		if sslProtocols, exists := cfgm.Data["ssl-protocols"]; exists {
+			cfg.SSLProtocols = sslProtocols
+		}
+		if sslCiphers, exists := cfgm.Data["ssl-ciphers"]; exists {
+			cfg.SSLCiphers = sslCiphers
+		}
+		if sslDHParam, exists := cfgm.Data["ssl-dhparam"]; exists {
+			cfg.SSLDHParam = sslDHParam
+		}
 	}
 	lbc.cnf.UpdateConfig(cfg)
 
