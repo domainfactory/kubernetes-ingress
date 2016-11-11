@@ -321,6 +321,9 @@ func (lbc *LoadBalancerController) syncCfgm(key string) {
 		if serverNamesHashMaxSize, exists := cfgm.Data["server-names-hash-max-size"]; exists {
 			cfg.MainServerNamesHashMaxSize = serverNamesHashMaxSize
 		}
+		if logFormat, exists := cfgm.Data["log-format"]; exists {
+			cfg.MainLogFormat = logFormat
+		}
 	}
 	lbc.cnf.UpdateConfig(cfg)
 
