@@ -40,16 +40,9 @@ http {
         ''      close;
     }
 
-    {{if not (empty .SSLProtocols)}}
-    ssl_protocols '{{.SSLProtocols}}';
-    {{end}}
-  	{{if not (empty .SSLCiphers)}}
-  	ssl_ciphers '{{.SSLCiphers}}';
-  	ssl_prefer_server_ciphers on;
-  	{{end}}
-  	{{if not (empty .SSLDHParam)}}
-  	ssl_dhparam {{.SSLDHParam}};
-  	{{end}}
+    {{if .SSLProtocols}}ssl_protocols '{{.SSLProtocols}}';{{end}}
+    {{if .SSLCiphers}}ssl_ciphers '{{.SSLCiphers}}';ssl_prefer_server_ciphers on;{{end}}
+    {{if .SSLDHParam}}ssl_dhparam {{.SSLDHParam}};{{end}}
 
     include /etc/nginx/conf.d/*.conf;
 }
